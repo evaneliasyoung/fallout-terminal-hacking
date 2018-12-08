@@ -1,0 +1,37 @@
+[data-mode="fnv"], [data-mode="fnv"] * {
+   font-family: "FixedSys", monospace;
+
+   cursor: url(../cursor/fnv.svg), auto;
+
+   color: #33DD88;
+   background-color: #0E2E20;
+}
+
+[data-mode="fnv"] td.content:hover {
+   color: #0E2E20;
+   background-color: #33DD88;
+}
+
+[data-mode="fnv"] .hovered {
+   color: #0E2E20;
+   background-color: #33DD88;
+}
+
+[data-mode="fnv"] .blinking {
+   animation-name: fnv-blinking;
+}
+
+@keyframes fnv-blinking {
+   0% {
+      color: #33DD88;
+      background-color: #112D1B;
+   }
+   50% {
+      color: #0E2E20;
+      background-color: #33DD88;
+   }
+   100% {
+      color: #33DD88;
+      background-color: #112D1B;
+   }
+}

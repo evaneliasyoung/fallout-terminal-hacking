@@ -1,0 +1,37 @@
+[data-mode="fo3"], [data-mode="fo3"] * {
+   font-family: "FixedSys", monospace;
+
+   cursor: url(../cursor/fo3.svg), auto;
+
+   color: #33DD88;
+   background-color: #0E2E20;
+}
+
+[data-mode="fo3"] td.content:hover {
+   color: #0E2E20;
+   background-color: #33DD88;
+}
+
+[data-mode="fo3"] .hovered {
+   color: #0E2E20;
+   background-color: #33DD88;
+}
+
+[data-mode="fo3"] .blinking {
+   animation-name: fnv-blinking;
+}
+
+@keyframes fo3-blinking {
+   0% {
+      color: #33DD88;
+      background-color: #112D1B;
+   }
+   50% {
+      color: #0E2E20;
+      background-color: #3AFD93;
+   }
+   100% {
+      color: #33DD88;
+      background-color: #112D1B;
+   }
+}

@@ -1,0 +1,121 @@
+@font-face {
+   font-family: "Share Tech Mono";
+   font-weight: 400;
+   font-style: normal;
+
+   src: url("fonts/share-tech-mono.woff");
+}
+
+@font-face {
+   font-family: "FixedSys";
+   font-weight: 400;
+   font-style: normal;
+
+   src: url("fonts/fixedsys.woff");
+}
+
+* {
+   user-select: none;
+}
+
+body {
+   display: flex;
+   overflow-y: hidden;
+   flex-direction: column;
+
+   margin: 0 0 0 0;
+
+   align-items: center;
+   justify-content: center;
+}
+
+table {
+  position: relative;
+}
+
+table, t, tr, td {
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+}
+
+td {
+   display: inline-block;
+
+   text-align: center;
+   vertical-align: middle;
+}
+
+.blinking {
+   content: "";
+   animation-duration: 0.5s;
+   animation-timing-function: step-end;
+   animation-iteration-count: infinite;
+}
+
+#scanlines, #scrollers {
+   position: absolute;
+   top: 0px;
+
+   width: 100%;
+
+   pointer-events: none;
+}
+#scanlines {
+   height: 100%;
+
+   background-color: rgba(0, 0, 0, 0);
+   background-image: linear-gradient(
+   transparent 0px,
+   transparent 1px,
+   rgba(0, 0, 0, 0.20) 1px,
+   rgba(0, 0, 0, 0.20) 2px
+   );
+   background-size: 100% 3px;
+}
+
+#scrollers {
+   animation-name: scrollers-animation;
+   animation-duration: 15s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+
+   background-color: rgba(255, 255, 255, 0.01);
+
+   /* text-shadow: #33DD88 0px 0px 5px; */
+}
+
+#options {
+   display: flex;
+   flex-direction: row;
+
+   width: 80%;
+   margin: 4em;
+
+   justify-content: space-around;
+}
+
+#options * {
+   width: 100px;
+   height: 100px;
+}
+
+#options > .text-btn {
+   font-size: 50px;
+   line-height: 100px;
+
+   text-align: center;
+
+   color: #FFFFFF;
+}
+
+@keyframes scrollers-animation {
+   0% {
+      top: -100%;
+   }
+   30% {
+      top: 100%;
+   }
+   100% {
+      top: 100%;
+   }
+}

@@ -1,0 +1,37 @@
+[data-mode="fo4"], [data-mode="fo4"] * {
+   font-family: "Share Tech Mono", monospace;
+
+   cursor: url(../cursor/fo4.svg), auto;
+
+   color: #00CB00;
+   background-color: #000000;
+}
+
+[data-mode="fo4"] td.content:hover {
+   color: #000000;
+   background-color: #00CB00;
+}
+
+[data-mode="fo4"] .hovered {
+   color: #000000;
+   background-color: #00CB00;
+}
+
+[data-mode="fo4"] .blinking {
+   animation-name: fo4-blinking;
+}
+
+@keyframes fo4-blinking {
+   0% {
+      color: #00CB00;
+      background-color: #000000;
+   }
+   50% {
+      color: #000000;
+      background-color: #00CB00;
+   }
+   100% {
+      color: #00CB00;
+      background-color: #000000;
+   }
+}
