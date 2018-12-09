@@ -124,7 +124,6 @@ function playKeys (amt) {
 }
 function playOtherKey (t) {
   if (localStorage.audioEnabled === 'false') { return }
-  console.log(t)
   $(`#sound-${t}`).get(0).play()
 }
 // </region>
