@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <!--
-   Author      : Evan Elias Young
-   Date        : 2018-11-15
-   Revision    : 2018-12-08
-   Description : Fallout terminal hacking simluator
--->
+  <!--
+    Author      : Evan Elias Young
+    Date        : 2018-11-15
+    Revision    : 2019-03-08
+    Description : Fallout terminal hacking simluator
+  -->
 
-<title>Fallout Terminal Hacking</title>
+  <title>Fallout Terminal Hacking</title>
 
-<link rel="stylesheet" href="styles/master.css">
-<link rel="stylesheet" href="styles/tiny.css" media="screen and (max-width: 749px)" type="text/css">
-<link rel="stylesheet" href="styles/small.css" media="screen and (min-width: 750px) and (max-width: 999px)" type="text/css">
-<link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 1000px) and (max-width: 1299px)" type="text/css">
-<link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 1300px)" type="text/css">
+  <link rel="stylesheet" href="styles/master.css">
+  <link rel="stylesheet" href="styles/tiny.css" media="screen and (max-width: 749px)" type="text/css">
+  <link rel="stylesheet" href="styles/small.css" media="screen and (min-width: 750px) and (max-width: 999px)" type="text/css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 1000px) and (max-width: 1299px)" type="text/css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 1300px)" type="text/css">
 
-<link rel="stylesheet" href="styles/flavors/fo76.css">
-<link rel="stylesheet" href="styles/flavors/fo4.css">
-<link rel="stylesheet" href="styles/flavors/fnv.css">
-<link rel="stylesheet" href="styles/flavors/fo3.css">
+  <link rel="stylesheet" href="styles/flavors/fo76.css">
+  <link rel="stylesheet" href="styles/flavors/fo4.css">
+  <link rel="stylesheet" href="styles/flavors/fnv.css">
+  <link rel="stylesheet" href="styles/flavors/fo3.css">
 
-<script src="words.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script defer src="scripts.js" charset="utf-8"></script>
+  <script src="words.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="scripts.js" charset="utf-8"></script>
 
-<meta charset="utf-8">
-<meta name="author" content="Evan Young">
-<meta name="copyright" content="&copy; 2018 Evan Young">
-<meta name="date" content="2018-12-08">
-<meta name="description" content="Fallout terminal hacking simluator">
-<meta name="keywords" content="key words">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, nofollow">
+  <meta charset="utf-8">
+  <meta name="author" content="Evan Young">
+  <meta name="copyright" content="&copy; 2018-2019 Evan Young">
+  <meta name="date" content="2019-03-08">
+  <meta name="description" content="Fallout terminal hacking simluator">
+  <meta name="keywords" content="key words">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, nofollow">
 </head>
 
 <body>
-   <table><tbody></tbody></table>
-   <div id="sound-keyboard">
-      <audio src="sound/k1.ogg"></audio>
-      <audio src="sound/k2.ogg"></audio>
-      <audio src="sound/k3.ogg"></audio>
-      <audio src="sound/k4.ogg"></audio>
-      <audio src="sound/k5.ogg"></audio>
-      <audio src="sound/k6.ogg"></audio>
-      <audio src="sound/k7.ogg"></audio>
-      <audio src="sound/k8.ogg"></audio>
-      <audio src="sound/k9.ogg"></audio>
-      <audio src="sound/k10.ogg"></audio>
-      <audio src="sound/k11.ogg"></audio>
-      <audio src="sound/k12.ogg"></audio>
-   </div>
-   <div id="sound-other">
-      <audio src="sound/button.ogg" id="sound-button"></audio>
-      <audio src="sound/kenter.ogg" id="sound-kenter"></audio>
-      <audio src="sound/passbad.ogg" id="sound-passbad"></audio>
-      <audio src="sound/passgood.ogg" id="sound-passgood"></audio>
-   </div>
-   <div id="options">
-      <img src="images/speaker.svg" alt="Audio Toggle" id="audioToggle">
-      <div id="rstChange" class="text-btn">RST</div>
-      <div id="modeChange" class="text-btn">FO4</div>
-      <div id="diffChange" class="text-btn">4</div>
-      <img src="images/crt.svg" alt="CRT Toggle" id="crtToggle">
-   </div>
+  <table>
+    <tbody></tbody>
+  </table>
+  <div id="sound-keyboard">
+    <audio src="sound/k1.ogg"></audio>
+    <audio src="sound/k2.ogg"></audio>
+    <audio src="sound/k3.ogg"></audio>
+    <audio src="sound/k4.ogg"></audio>
+    <audio src="sound/k5.ogg"></audio>
+    <audio src="sound/k6.ogg"></audio>
+    <audio src="sound/k7.ogg"></audio>
+    <audio src="sound/k8.ogg"></audio>
+    <audio src="sound/k9.ogg"></audio>
+    <audio src="sound/k10.ogg"></audio>
+    <audio src="sound/k11.ogg"></audio>
+    <audio src="sound/k12.ogg"></audio>
+  </div>
+  <div id="sound-other">
+    <audio src="sound/button.ogg" id="sound-button"></audio>
+    <audio src="sound/kenter.ogg" id="sound-kenter"></audio>
+    <audio src="sound/passbad.ogg" id="sound-passbad"></audio>
+    <audio src="sound/passgood.ogg" id="sound-passgood"></audio>
+  </div>
+  <div id="options">
+    <img src="images/speaker.svg" alt="Audio Toggle" id="audioToggle">
+    <div id="rstChange" class="text-btn">RST</div>
+    <div id="modeChange" class="text-btn">FO4</div>
+    <div id="diffChange" class="text-btn">4</div>
+    <img src="images/crt.svg" alt="CRT Toggle" id="crtToggle">
+  </div>
 </body>
+
 </html>

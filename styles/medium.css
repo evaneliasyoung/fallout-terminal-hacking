@@ -1,10 +1,9 @@
 td {
-   font-size: 20px;
-   line-height: 18px;
-
-   width: 18px;
-   height: 18px;
+  font-size: 20px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
 }
 #scrollers {
-   height: 80px;
+  height: 80px;
 }
